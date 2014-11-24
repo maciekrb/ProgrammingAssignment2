@@ -21,6 +21,10 @@
 #   The above matrix can now be used with cacheSolve function: 
 #
 #    cacheSolve(caching_matrix)
+# 
+#  If the matrix is invertable, you can test the inverse matrix, multiplying
+#  the resulting matrix by the original one. You should get the identity 
+#  matrix as a result.
 makeCacheMatrix <- function(x = matrix()) {
 
         # init m variable to null, this is cheched later in the cacheSolve function
@@ -67,7 +71,7 @@ cacheSolve <- function(x, ...) {
         # inverse of the provided matrix and use setter method to cache, 
         # and return the calculated matrix
         data <- x$get()
-        m <- solve(data, ...) %*% data
+        m <- solve(data, ...)
         x$setinverse(m)
         m
 }
