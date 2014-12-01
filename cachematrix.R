@@ -18,9 +18,13 @@
 #   
 #     caching_matrix <- rbind(c(1, 3), c(3, 1))
 #     
-#   The above matrix can now be used with cacheSolve function: 
+#   The above matrix gets caching capabilities: 
 #
-#    cacheSolve(caching_matrix)
+#    caching_obj <- makeCacheMatrix(caching_matrix)
+
+#   The matrix can now be used with cache solve : 
+#    
+#    cacheSolve(caching_obj)
 # 
 #  If the matrix is invertable, you can test the inverse matrix, multiplying
 #  the resulting matrix by the original one. You should get the identity 
